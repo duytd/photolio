@@ -307,6 +307,24 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "Gemfile",
+			"settings":
+			{
+				"buffer_size": 2258,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "config/routes.rb",
+			"settings":
+			{
+				"buffer_size": 63,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -356,12 +374,12 @@
 	},
 	"expanded_folders":
 	[
+		"/home/duytd/rails_projects/demo_app",
 		"/home/duytd/rails_projects/demo_app/app",
-		"/home/duytd/rails_projects/demo_app/app/assets",
 		"/home/duytd/rails_projects/demo_app/app/controllers",
-		"/home/duytd/rails_projects/demo_app/app/models",
-		"/home/duytd/rails_projects/demo_app/app/views",
-		"/home/duytd/rails_projects/demo_app/lib"
+		"/home/duytd/rails_projects/photolio",
+		"/home/duytd/rails_projects/photolio/app",
+		"/home/duytd/rails_projects/photolio/app/controllers"
 	],
 	"file_history":
 	[
@@ -638,6 +656,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"factory_girl_rails",
+			"bcrypt-ruby",
+			"sprockets",
+			"bootstrap-sass",
 			"gravatar_for",
 			"following",
 			"sidebar",
@@ -761,11 +783,7 @@
 			"等關鍵詞也經常被使用。",
 			"get_items_data",
 			"src_tags",
-			"tag_pending",
-			"src_tags",
-			"original_item_tags",
-			"original_item_tags\n",
-			"tag-list"
+			"tag_pending"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -822,13 +840,77 @@
 		},
 		{
 			"path": "/home/duytd/rails_projects/demo_app"
+		},
+		{
+			"path": "/home/duytd/rails_projects/photolio"
 		}
 	],
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "Gemfile",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2258,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1499,
+								1499
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/Ruby/Ruby.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 54.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "config/routes.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 63,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								63,
+								63
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/Ruby/Ruby.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
