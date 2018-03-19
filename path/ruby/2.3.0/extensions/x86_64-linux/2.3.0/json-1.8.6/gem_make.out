@@ -1,0 +1,13 @@
+current directory: /home/duytd/rails_projects/photolio/path/ruby/2.3.0/gems/json-1.8.6/ext/json
+/home/duytd/.rvm/rubies/ruby-2.3.4/bin/ruby -r ./siteconf20180319-30151-gj75n3.rb extconf.rb
+creating Makefile
+
+current directory: /home/duytd/rails_projects/photolio/path/ruby/2.3.0/gems/json-1.8.6/ext/json
+make "DESTDIR=" clean
+
+current directory: /home/duytd/rails_projects/photolio/path/ruby/2.3.0/gems/json-1.8.6/ext/json
+make "DESTDIR="
+make: Nothing to be done for 'all'.
+
+current directory: /home/duytd/rails_projects/photolio/path/ruby/2.3.0/gems/json-1.8.6/ext/json
+make "DESTDIR=" install

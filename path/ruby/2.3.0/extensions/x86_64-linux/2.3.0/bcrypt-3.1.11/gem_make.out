@@ -1,0 +1,19 @@
+current directory: /home/duytd/rails_projects/photolio/path/ruby/2.3.0/gems/bcrypt-3.1.11/ext/mri
+/home/duytd/.rvm/rubies/ruby-2.3.4/bin/ruby -r ./siteconf20180319-18701-1fdu9g7.rb extconf.rb
+creating Makefile
+
+current directory: /home/duytd/rails_projects/photolio/path/ruby/2.3.0/gems/bcrypt-3.1.11/ext/mri
+make "DESTDIR=" clean
+
+current directory: /home/duytd/rails_projects/photolio/path/ruby/2.3.0/gems/bcrypt-3.1.11/ext/mri
+make "DESTDIR="
+compiling wrapper.c
+compiling crypt.c
+compiling crypt_blowfish.c
+compiling crypt_gensalt.c
+compiling bcrypt_ext.c
+linking shared-object bcrypt_ext.so
+
+current directory: /home/duytd/rails_projects/photolio/path/ruby/2.3.0/gems/bcrypt-3.1.11/ext/mri
+make "DESTDIR=" install
+/usr/bin/install -m 0755 bcrypt_ext.so ./.gem.20180319-18701-1vz1vir
