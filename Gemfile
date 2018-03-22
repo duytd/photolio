@@ -17,7 +17,9 @@ gem 'bootstrap-sass', '2.3.2.0'
 gem 'sprockets', '3.7.1'
 gem 'bcrypt-ruby', '3.1.2'
 gem 'carrierwave', '~> 1.0'
-
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
+gem 'pry-rails'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks

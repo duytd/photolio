@@ -1,19 +1,42 @@
 <h1>Show page List</h1>
-<div id="notice"><%= $notice %></div>
+<div id="notice"><%= @notice %></div>
 
 <%= form_tag contents_path, method:'post', multipart: true do %>
   <div class='form_warp'>
-    <div class='form_info'><%= text_field_tag 'title' %></div>
+    <div class='form_info'><%= text_field_tag 'title', nil, maxlength: 20, placeholder: 'title' %></div>
+    <div class='form_info'><%= text_area_tag 'description', nil, rows: 5, cols:10, placeholder: 'description' %></div>
     <div class='form_info'><%= file_field_tag 'image' %></div>
-    <div class='submit_btn'><%= submit_tag '글쓰기' %></div>
+    <div class='form_info'>
+      <%#= p.label :image%>
+      <%#= p.file_field :image%>
+    </div>
+    <div class='submit_btn'><%= submit_tag '등 록' ,class: "btn btn-middle btn-primary"%></div>
   </div>
 <% end %>
 
+<%= will_paginate%>
 <ol>
   <% @contents.each do |p| %>
-  <li>
-    <div class='list_img'><img src="<%=p.image.url%>"></div>
-    <div class='list_info'><%= p.id %> / <%=p.title%></div>    
-  </li>
+    <li>
+      <%#=flash[:alert]%>
+      <div class='list_img'> <img src="<%=p.image.url%>"> </div>
+      <div class='list_info'>Title: <%= p.title %> / Description: <%=p.description%></div>
+      <div class='list_link'>
+        <%= link_to 'Edit', edit_content_path(p.id), class: "btn btn-small" %> /
+        <%= link_to 'Delete', content_path(p.id), class: "btn btn-small", methed: :delete, data: { confirm: "You sure?" }  %>
+      </div>
+    </li>
+  <% end %>
+
+  <% if !@contents %>
+    <li>No search information.</li>
   <% end %>
 </ol>
+<%= will_paginate%>
+
+<div class='search_wrap'>
+  <%= form_tag contents_show_path do %>
+    <%= select_tag "serach_type", "<option selected='selected'>title</option><option>description</option>".html_safe, class: 'serach_type' %>
+    <%= text_field_tag 'search_text', nil, placeholder: 'SeArCh' %> <%= submit_tag '찾기' , class: "btn btn-small btn-primary" %>
+  <% end %>
+</div>

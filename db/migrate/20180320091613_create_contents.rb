@@ -4,7 +4,6 @@ class CreateContents < ActiveRecord::Migration[5.1]
       t.string :title
       t.text :description
       t.string :image
-
       t.timestamps
     end
   end

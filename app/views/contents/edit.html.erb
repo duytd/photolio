@@ -1,0 +1,22 @@
+<h1>Edit page</h1>
+<div id="notice"><%= @notice %></div>
+<%#= flash[:success] %>
+
+<% @contents2.each do |v| %>
+  <img src="<%=v.image.url%>">
+  <%#=v.title%>
+  <%#=v.description%>
+<% end %>
+
+<%= form_for( @contents,url: content_path(@contents), method: :patch ) do |f| %>
+  <%#= render 'shared/error_messages', object: f.object %>
+  <div class="edit_wrap">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+  <%= f.submit "수 정", class: "btn btn-middle btn-primary" %>
+<% end %>
+
+<div class=''> <%= link_to 'List', contents_show_path , class: "btn btn-small "%>   </div>
