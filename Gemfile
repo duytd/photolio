@@ -16,6 +16,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'bootstrap-sass', '2.3.2.0'
 gem 'sprockets', '3.7.1'
 gem 'bcrypt-ruby', '3.1.2'
+gem 'carrierwave', '~> 1.0'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
@@ -38,11 +39,6 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '~> 2.13'
-  gem 'selenium-webdriver'
-  gem 'factory_girl_rails', '4.2.0'
-  gem 'cucumber-rails', '1.4.0', :require => false
-  gem 'database_cleaner', github: 'bmabey/database_cleaner'
 end
 
 group :development do

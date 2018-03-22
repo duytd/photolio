@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
-  devise_for :users
   root  'index_page#home'
+  devise_for :users
+  resources :contents, except: [:index, :new, :show]
+  match 'contents/show', to: 'contents#show', via: 'get'
 end

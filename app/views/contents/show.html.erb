@@ -1,0 +1,19 @@
+<h1>Show page List</h1>
+<div id="notice"><%= $notice %></div>
+
+<%= form_tag contents_path, method:'post', multipart: true do %>
+  <div class='form_warp'>
+    <div class='form_info'><%= text_field_tag 'title' %></div>
+    <div class='form_info'><%= file_field_tag 'image' %></div>
+    <div class='submit_btn'><%= submit_tag '글쓰기' %></div>
+  </div>
+<% end %>
+
+<ol>
+  <% @contents.each do |p| %>
+  <li>
+    <div class='list_img'><img src="<%=p.image.url%>"></div>
+    <div class='list_info'><%= p.id %> / <%=p.title%></div>    
+  </li>
+  <% end %>
+</ol>
