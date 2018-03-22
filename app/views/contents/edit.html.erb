@@ -1,7 +1,7 @@
 <h1>Edit page</h1>
 <div id="notice"><%= @notice %></div>
 <%#= flash[:success] %>
-
+<div class='edit_total_wrap'>
 <% @contents2.each do |v| %>
   <img src="<%=v.image.url%>">
   <%#=v.title%>
@@ -16,7 +16,9 @@
     <%= f.label :description %>
     <%= f.text_area :description %>
   </div>
-  <%= f.submit "수 정", class: "btn btn-middle btn-primary" %>
+  <div class='edit_btn_wrap'>
+    <%= f.submit "수 정", class: "btn btn-middle btn-primary" %>
+    <%= link_to 'List', contents_show_path , class: "btn btn-middle "%>
+  </div>
 <% end %>
-
-<div class=''> <%= link_to 'List', contents_show_path , class: "btn btn-small "%>   </div>
+</div>

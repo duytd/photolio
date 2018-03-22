@@ -1,3 +1,4 @@
+/*List*/
 .form_warp {width: 50%;margin: 0 auto;padding: 20px 0;}
 
 ol {border-top: 2px solid #000;}
@@ -6,7 +7,7 @@ ol>li { padding: 6px 0px; border-bottom: 1px solid #e2e2e2;}
 .list_img { display: inline-block; width: 15%; }
 .list_info { display: inline-block; width: 70%; }
 .list_link { width: 14%; display: inline-block; }
-img { width: 150px; }
+.list_img>img { width: 150px; }
 .submit_btn { text-align: center; }
 
 .search_wrap { width: 54%; margin: 0 auto; }
@@ -14,3 +15,18 @@ select#serach_type { width: 90px; vertical-align: top; }
 input#search_text { width: 330px; vertical-align: top; }
 
 .search_wrap input[type="submit"] {vertical-align: text-top;}
+
+/*Edit*/
+.edit_total_wrap {
+    width: 60%;
+    margin: 35px auto;
+    text-align: center;
+}
+.edit_total_wrap>img {border-radius: 5px;}
+.edit_wrap {
+    text-align: left;
+    border: 1px solid #e0e0e0;
+    padding: 15px 10px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
