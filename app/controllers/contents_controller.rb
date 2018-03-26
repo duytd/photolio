@@ -1,9 +1,11 @@
 class ContentsController < ApplicationController
   #before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: :edit
 
   def show
     @content = Content.new
-    @contents = Content.all.paginate(page: params[:page], per_page: 7)
+    #@contents = Content.all.paginate(page: params[:page], per_page: 7)
+    @contents = Content.where(user_id: current_user.id).paginate(page: params[:page], per_page: 7)
     # User.find_by(name: params[:name].downcase)
     # where 문을 사용하면 배열로 받아온다.
     # find_by 는 찾는게 없더라고 nil 값으로 리턴된다. find로 하면 없을때 오류가 발생한다.

@@ -2,13 +2,15 @@
 <div id="notice"><%= flash[:notice] %></div>
 <%#= flash[:success] %>
 <div class='edit_total_wrap'>
-  <% @contents2.each do |v| %>
-    <img src="<%=v.image.url%>">
+  <%# @contents2.each do |v| %>
+    <!-- <img src="<%#=v.image.url%>"> -->
     <%#=v.title%>
     <%#=v.description%>
-  <% end %>
+  <%# end %>
 
-  <% if signed_in? %>
+  <img src="<%= @content.image.url %>">
+
+  <% if signed_in? && @content.user_id == current_user.id %>
     <%= render "contents/login_info" %>
   <% else %>
     <%= render "contents/logout_info" %>
