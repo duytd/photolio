@@ -51,7 +51,10 @@ class ContentsController < ApplicationController
   end
 
   def destroy
-    redirect_to :contents_show
+    #binding.pry
+    @content = Content.find(params[:id])
+    @content.destroy
+    redirect_to root_path
   end
 
   def search
