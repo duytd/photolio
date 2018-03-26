@@ -1,0 +1,27 @@
+ul, ol { margin: 0 0 10px 15px !important; list-style: none; }
+.comment_wrap > .submit_btn { display: inline-block; vertical-align: top; float: right; }
+.comment_subject { width: 85%; display: inline-block; }
+.comment_sub {
+    display: inline-block;
+    width: 85%;
+    font-size: 20px;
+    line-height: 30px;
+}
+.comment_link {
+    display: inline-block;
+    float: right;
+    padding-right: 10px;
+    vertical-align: top;
+}
+.comment_con {
+    display: inline-block;
+    width: 100%;
+    min-height: 50px;
+    background: #989898;
+    color: #fff;
+    font-size: 17px;
+    line-height: 18px;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}

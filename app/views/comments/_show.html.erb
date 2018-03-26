@@ -1,0 +1,15 @@
+<% if signed_in? %>
+  <div class='comment_title'> - Comment - </div>
+  <%= form_for [@content, @comment] do |f| %>
+    <div class='comment_wrap'>
+      <div class='comment_subject'><%= f.text_field('subject',placeholder: 'subject') %></div>
+      <div class='submit_btn'><%= f.submit('등 록' ,class: "btn btn-middle btn-primary")%></div>
+      <div class='comment_info'><%= f.text_area('com_content', rows: 4, placeholder: 'content') %></div>
+    </div>
+  <% end %>
+<% else %>
+  <div class='comment_title'> - Login First - </div>
+<% end %>
+<%= render "comments/comments_list"%>
+
+<!-- 사용자 Id : <%#= current_user.id %> -->

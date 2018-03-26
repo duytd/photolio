@@ -1,0 +1,19 @@
+<%= will_paginate(@comments) %>
+<ul>
+  <% @comments.each do |p| %>
+    <li>
+      <%#=flash[:alert]%>
+      <div class='comment_sub'> <%= p.subject %></div>
+      <div class='comment_link'>
+        <%= link_to 'Edit', edit_content_comment_path(@content, p), class: "btn btn-small" %>  /
+        <%= link_to 'Delete', content_comment_path(@content, p), class: "btn btn-small", methed: :delete, data: { confirm: "comment Delete. Are you sure?" }  %>
+      </div>
+      <div class='comment_con'><%=p.com_content%></div>
+    </li>
+  <% end %>
+  <% if @comments %>
+    <!-- <div>No search Comment.</div> -->
+  <% end %>
+
+</ul>
+<%= will_paginate(@comments) %>

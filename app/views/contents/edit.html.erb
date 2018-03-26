@@ -1,24 +1,20 @@
 <h1>Edit page</h1>
-<div id="notice"><%= @notice %></div>
+<div id="notice"><%= flash[:notice] %></div>
 <%#= flash[:success] %>
 <div class='edit_total_wrap'>
-<% @contents2.each do |v| %>
-  <img src="<%=v.image.url%>">
-  <%#=v.title%>
-  <%#=v.description%>
-<% end %>
+  <% @contents2.each do |v| %>
+    <img src="<%=v.image.url%>">
+    <%#=v.title%>
+    <%#=v.description%>
+  <% end %>
 
-<%= form_for( @contents,url: content_path(@contents), method: :patch ) do |f| %>
-  <%#= render 'shared/error_messages', object: f.object %>
-  <div class="edit_wrap">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-    <%= f.label :description %>
-    <%= f.text_area :description %>
-  </div>
-  <div class='edit_btn_wrap'>
-    <%= f.submit "수 정", class: "btn btn-middle btn-primary" %>
-    <%= link_to 'List', contents_show_path , class: "btn btn-middle "%>
-  </div>
-<% end %>
+  <% if signed_in? %>
+    <%= render "contents/login_info" %>
+  <% else %>
+    <%= render "contents/logout_info" %>
+  <% end %>
+</div>
+
+<div class='comment_total_wrap'>
+  <%= render "comments/show" %>
 </div>

@@ -1,17 +1,14 @@
 <h1>Show page List</h1>
 <div id="notice"><%= @notice %></div>
-
-<%= form_tag contents_path, method:'post', multipart: true do %>
-  <div class='form_warp'>
-    <div class='form_info'><%= text_field_tag 'title', nil, maxlength: 20, placeholder: 'title' %></div>
-    <div class='form_info'><%= text_area_tag 'description', nil, rows: 5, cols:10, placeholder: 'description' %></div>
-    <div class='form_info'><%= file_field_tag 'image' %></div>
-    <div class='form_info'>
-      <%#= p.label :image%>
-      <%#= p.file_field :image%>
+<% if signed_in? %>
+  <%= form_tag contents_path, method:'post', multipart: true do %>
+    <div class='form_warp'>
+      <div class='form_info'><%= text_field_tag 'title', nil, maxlength: 20, placeholder: 'title' %></div>
+      <div class='form_info'><%= text_area_tag 'description', nil, rows: 5, cols:10, placeholder: 'description' %></div>
+      <div class='form_info'><%= file_field_tag 'image' %></div>
+      <div class='submit_btn'><%= submit_tag '등 록' ,class: "btn btn-middle btn-primary"%></div>
     </div>
-    <div class='submit_btn'><%= submit_tag '등 록' ,class: "btn btn-middle btn-primary"%></div>
-  </div>
+  <% end %>
 <% end %>
 
 <%= will_paginate%>

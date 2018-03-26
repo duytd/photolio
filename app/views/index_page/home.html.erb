@@ -1,7 +1,39 @@
 <h1>HOME Photolio</h1>
-
 <div id="notice"><%= $notice %></div>
 
+<%= link_to 'Make and List Page', contents_show_path , class: "btn btn-middle" %>
 <br><br>
-<%= link_to 'Make and List Page', contents_show_path %>
-<br>
+
+<div class="grid">
+<% @contents.each do |v,k| %>
+    <% if cycle('odd','even').strip == 'odd' %>
+    <div class="grid-item">
+    <% else %>
+    <div class="grid-item grid-item--width2 grid-item--height2">
+    <% end %>
+      <img src="<%=v.image.url%>">
+      <%= link_to edit_content_path(v.id) do %>
+        <div class="grid_link"> Link </div>
+      <% end %>
+    </div>
+<% end %>
+</div>
+
+<script>
+var $grid = $('.grid').masonry({
+  itemSelector: '.grid-item',
+  columnWidth: 166
+});
+
+$grid.on( 'click', '.grid-item', function() {
+  // change size of item via class
+  $( this ).toggleClass('grid-item--gigante');
+  // trigger layout
+  $grid.masonry();
+});
+
+$grid.on( 'layoutComplete', function( event, laidOutItems ) {
+  console.log( 'Masonry layout complete with ' + laidOutItems.length + ' items' );
+});
+
+</script>

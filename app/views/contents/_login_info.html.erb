@@ -1,0 +1,13 @@
+<%= form_for( @content,url: content_path(@content), method: :patch ) do |f| %>
+  <%#= render 'shared/error_messages', object: f.object %>
+  <div class="edit_wrap">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+  <div class='edit_btn_wrap'>
+    <%= f.submit "수 정", class: "btn btn-middle btn-primary" %>
+    <%= link_to 'List', contents_show_path , class: "btn btn-middle "%>
+  </div>
+<% end %>
